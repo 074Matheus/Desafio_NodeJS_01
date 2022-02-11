@@ -32,14 +32,12 @@ app.use(express.json());
 /**
  * Server Activation
  */
+ app.get('/home', (req, res) => {
+  res.send('Hello World!')
+})
 
 app.listen(PORT, () => {
-  console.log(`Executando na porta ${PORT}`);
+  console.log(`listening on port ${PORT}`);
   // Escreva aqui a sua msg para o mundo
   console.log("Hello World!");
-});
-
-// Hello Worlrd Printado na tela
-app.get("/", function (req, res) {
-  res.send("Hello World!");
-});
+})
